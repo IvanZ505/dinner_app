@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dinner App</string>
+    <string-array name="spinner">
+<!--        <item>Pizza</item>-->
+<!--        <item>Sushi</item>-->
+<!--        <item>Tacos</item>-->
+<!--        <item>Ramen</item>-->
+<!--        <item>Fried Rice</item>-->
+    </string-array>
+</resources>
