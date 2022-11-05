@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        val foodArray: ArrayList<String> = ArrayList()
+        val foodArray: ArrayList<String> = ArrayList(10)
         foodArray.add("sushi")
         foodArray.add("pasta")
         foodArray.add("ramen")
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     fun Context.toast(message: CharSequence) =
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
 
     private fun addDelete(view: View, addBool : Boolean, foodArray : ArrayList<String>) {
         if(addBool) {
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun randomize(view: View, foodArray: ArrayList<String>) {
-        val choice = Random.nextInt(0, foodArray.size-1)
+        val choice = Random.nextInt(0, foodArray.size)
         val urchoice = foodArray[choice]
 
         binding.randomChoice.text = urchoice
